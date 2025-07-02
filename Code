@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layan Mohammed | Digital Garden</title>
+  <style>
+    :root {
+      --blush: #f9e0eb;
+      --rose: #e7a7c5;
+      --white: #ffffff;
+      --text-dark: #333;
+      --soft-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://images.unsplash.com/photo-1534179523731-b2922018150a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 60px 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: var(--rose);
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      padding: 30px;
+      margin: 30px auto;
+      border-radius: 20px;
+      max-width: 800px;
+      box-shadow: var(--soft-shadow);
+      backdrop-filter: blur(8px);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
+    .card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .card h2 {
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      color: #444;
+      white-space: pre-line;
+    }
+
+    .email-container {
+      margin-top: 20px;
+    }
+
+    .email-reveal {
+      background: var(--white);
+      color: var(--rose);
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 30px;
+      font-family: monospace;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .email-reveal:hover {
+      background: var(--blush);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+
+    <header>
+      <h1>Layan Mohammed</h1>
+      <p>My Major: Computer Science</p>
+    </header>
+
+    <div class="card" id="about">
+      <img src="https://images.unsplash.com/photo-1644310972589-643a2099d946?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Layan">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Layan Mohammed — a Computer Science major passionate about innovation and creating meaningful digital solutions.
+I enjoy developing smart applications and crafting user-friendly websites that strike a balance between function and beauty.
+My interests include artificial intelligence, web development, and human-centered technology.
+        
+      </p>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Let’s Connect</h2>
+      <p>Click below to reveal my email.</p>
+      <div class="email-container">
+        <div class="email-reveal" onclick="revealEmail()">Show Email</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Designed by Layan 🌸
+  </footer>
+
+  <script>
+    function revealEmail() {
+      const box = document.querySelector('.email-reveal');
+      box.innerText = 'layan@gmail.com';
+      box.style.background = '#fff0f5';
+    }
+  </script>
+
+</body>
+</html>
